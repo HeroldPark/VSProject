@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        // file을 읽어왔다고 가정
+        // 테이블에 넣을 데이터 정의
+        var woman = [	// 테이블에 넣을 배열 임의적으로 작성하기
+            ["", ""],		// --> 열 목록에 들어갈 것이기 때문에 빈칸
+            ["aaa", "01:06:11"],
+            ["bbb", "01:08:31"],
+            ["ccc", "01:16:55"]
+        ];
+        
+        var man = [
+            ["", ""],
+            ["AAA", "01:07:11"],
+            ["BBB", "01:08:55"],
+            ["CCC", "01:10:32"]
+        ];
+
+        // 테이블 th와 td데이터 삽입하기
+        $(function () {
+            //	$("tr:even").css("background-color", "green");	
+            // even : 짝수에 함수 적용하기 , odd :홀수
+            // 위의 코드는 짝수번째 인덱스의 배경색을 초록으로 지정하였다.
+
+            //	$("tr:eq(1) td:eq(0)").html("집어넣을 이름");	//
+            //	$("tr:eq(1) td:eq(1)").html("집어넣을 데이터");
+            
+            // eq = equals(번지수를 의미)
+            // 배열 데이터를 테이블에 넣기
+            $('#woman').click(function () {	
+                // woman 버튼 눌렀을 때 적용
+                //데이터 넣기
+                for (var i = 0; i < woman.length; i++) {	// woman배열의 행의 수 만큼
+                    for (var j = 0; j < woman[i].length; j++) {	//	woman 배열의 열의 수 만큼
+                        $("tr:eq("+i+") td:eq("+j+")").html(woman[i][j]);
+                        // i번째 행의 j번째 열에 woman[i][j] 데이터 넣음
+                    }	
+                }
+                
+            });
+
+            $('#man').click(function () {	// man버튼 눌렀을 때 적용
+                //데이터 넣기
+                for (var i = 0; i < man.length; i++) {
+                    for (var j = 0; j < man[i].length; j++) {
+                        $("tr:eq("+i+") td:eq("+j+")").html(man[i][j]);
+                    }	
+                }
+            });
+
+            // 마우스 오버 시 색상변화 적용하기
+            $("td").mouseover(function () {
+            //CSS 구현 세 가지의 방법
+            //	$(this).css("background-color", "#ffff00");
+            //	$(this).css("color", "#000");
+                $(this).css({"background-color":"#ffff00","color":"#000"})
+                // json으로 표현한 css key:value
+            });
+
+            // 마우스 오버 시 색상변화 적용하기
+            $("td").mouseout(function () {
+                $(this).css("background-color", "#666666");
+                $(this).css("color", "#fff");
+            });
+            
+        });
+    </script>
+
+    <input type="button" id="woman" value="womanValue" />
+    <input type="button" id="man" value="manValue" />
+
+</body>
+</html>

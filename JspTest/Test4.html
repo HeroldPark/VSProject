@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        function calc() {
+            var val1 = $("#val1").val(); // input 값을 가져올 때 사용하는 방식
+            var result = val1;
+            $("#result").val(result);    // result 값을 input에 넣을 때 사용하는 방식
+
+            console.log("javascript : result = " + result + ", resultId = " + $("#result").val() );
+        }
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready( function() {
+            console.log("jQuery Start.");
+
+            $("#Print").click(function() {
+                console.log("jQuery print Start.");
+                console.log("result = " + $("#result").val() );
+            });
+        });
+
+    </script>
+
+    <input type="text" id="val1">
+    <input type="text" id="result" readonly>
+    <input type="button" id="Print" onclick="calc();" value="Print calc" />
+
+</body>
+</html>

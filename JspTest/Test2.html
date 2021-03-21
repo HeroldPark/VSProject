@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready( function() {
+            // for 문으로 가져 올 경우
+             $("#BtnFor").click(function(){
+                var size = $("input[name='EMAIL']").length;
+                for(i=0;i<size;i++){
+                   alert( i + "번째 메일주소 : " + $("input[name='EMAIL']").eq(i).attr("value") );
+                }
+            });
+
+            // each 로 가져올 경우
+             $("#BtnEach").click(function(){
+                $("input[name='EMAIL']").each(function (i) {
+                     alert( i + "번째 메일주소 : " + $("input[name='EMAIL']").eq(i).attr("value") );
+                });
+            });
+         });
+    </script>
+
+    <tr>
+        <td><input type="text" name="EMAIL" id="EMAIL" value="" ></td>
+        <td><input type="text" name="EMAIL" id="EMAIL" value="" ></td>
+        <td><input type="text" name="EMAIL" id="EMAIL" value="" ></td>
+    </tr>
+    <tr>
+        <button id="BtnFor"> 버튼FOR </button>
+        <button id="BtnEach"> 버튼EACH </button>
+    </tr>
+</body>
+</html>

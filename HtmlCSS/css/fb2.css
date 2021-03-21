@@ -1,0 +1,29 @@
+/* meterial.io : COLOR TOOL */
+/* A Complete Guide to Flexbox */
+.container {
+    padding-top: 100px;
+    background: rgb(187, 187, 36);
+    height: 100vh;
+    display: flex;
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background: #ef9a9a;
+    /* order: 3; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    flex-basis: 2 2 50%;    /* main axis */
+    align-self: center;  
+}
+.item2 {
+    background: #9e1f4a;
+}
+.item3 {
+    background: #9c7676;
+}

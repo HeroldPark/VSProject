@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>                 
+    <script> 
+        $(document).ready(function() { 
+            // $('#menu').css('color', 'red'); 
+            // $('*').css('color', 'skyblue');
+            // $('h1, .best').css('color', 'red'); // h1 or .best
+            $('h1 .best').css('color', 'blue'); // h1 and .best - 없으므로 기본색인 검정색
+        });
+     </script> 
+</head> 
+<body> 
+    <h1> 피콜로 서점 </h1> 
+    <ul id="menu"> 
+        <li>1. 떠오르는 신작</li> 
+        <li class="best">2. 베스트 셀러</li> 
+        <li class="good">3. 스테디 셀러</li> 
+        <li>4. 반값 할인</li> 
+        <li>5. Q&A</li> 
+    </ul> 
+</body> 
+</html> 

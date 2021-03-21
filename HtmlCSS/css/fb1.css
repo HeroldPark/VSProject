@@ -1,0 +1,53 @@
+/* meterial.io : COLOR TOOL */
+/* A Complete Guide to Flexbox */
+.container {
+    background: rgb(187, 187, 36);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: column nowrap; */
+
+    justify-content: flex-start;
+    justify-content: space-between;
+    /* align-items: center; */
+    align-items: baseline;
+    /* align-content: center; */
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background: #ef9a9a;
+}
+.item2 {
+    background: #9e1f4a;
+}
+.item3 {
+    background: #9c7676;
+}
+.item4 {
+    background: #581d1d;
+}
+.item5 {
+    background: #7fdb7c;
+}
+.item6 {
+    background: #4e9122;
+}
+.item7 {
+    background: #5c15e0;
+}
+.item8 {
+    background: #808b82;
+}
+.item9 {
+    background: #720a0a;
+}
+.item10 {
+    background: #3a6340;
+}

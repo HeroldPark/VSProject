@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>                                                                                 
+        $(document).ready(function () {
+            // var children = $('body').children(); 
+            // var children = $('body').children('span').children('b').text(); 
+            // var children = $('body').find('*');
+            // var children = $('span').siblings(); 
+            // var children = $('span').siblings('b:eq(0)'); //첫번째 b 요소
+            // var bTags = $('#four').parent();
+            // console.log(bTags);
+
+            var attrObj = { 
+                'data-value': 10, 
+                'data-value2': 20, 
+                'data-value3': 30 
+            };
+    
+            $('span').attr(attrObj);
+        });
+    </script> 
+</head>
+<body>
+    <b>첫번째</b><br>
+    <b>두번째</b><br>
+    <b>세번째</b><br>
+    <span>
+        <b id="four">네번째</b>
+    </span>
+</body>
+</html>
