@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="child.js" defer></script>
+    <title>Child</title>
+</head>
+<body>
+    <div class="page-header">
+        <h1>window 객체 테스트<small>자식창</small></h1>
+        <p>input 창에 텍스트 입력 후 버턴을 누르면 부모창에 잇는 함수를 호출하고 테스트를 넘김</p>
+    </div>
+    
+    <input type="text" id="sendMsg">
+    <button class="btn btn-primary" onclick="callParent()">부모창 함수 호출</button>
+</body>
+</html>
